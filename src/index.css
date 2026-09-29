@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens: space-separated RGB so Tailwind opacity works. Rebrand here. */
+:root {
+  --bg: 255 255 255;
+  --surface: 245 247 250;
+  --ink: 15 23 42;
+  --muted: 100 116 139;
+  --line: 226 232 240;
+  --primary: 30 64 175;
+  --accent: 194 105 10;
+  --danger: 220 38 38;
+  --success: 22 163 74;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-bg font-sans text-ink antialiased;
+  }
+}
